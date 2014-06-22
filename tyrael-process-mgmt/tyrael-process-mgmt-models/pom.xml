@@ -5,7 +5,13 @@
     <artifactId>tyrael-process-mgmt</artifactId>
     <version>1.0</version>
   </parent>
-  <groupId>tyrael-process-mgmt-models</groupId>
   <artifactId>tyrael-process-mgmt-models</artifactId>
   <name>Tyrael Engine :: Process Management :: Models</name>
+  
+  <dependencies>
+    <dependency>
+      <groupId>baldy.commons</groupId>
+      <artifactId>baldy-commons-models</artifactId>
+    </dependency> 
+  </dependencies>
 </project>

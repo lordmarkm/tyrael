@@ -11,6 +11,7 @@
 
   <properties>
     <project.version>1.0</project.version>
+    <baldy-commons.version>2.0</baldy-commons.version>
 
     <maven.jetty.version>8.1.14.v20131031</maven.jetty.version>
     <spring.version>4.0.2.RELEASE</spring.version>
@@ -44,67 +45,78 @@
 
   <dependencyManagement>
     <dependencies>
+      <!-- SELF -->
+      <dependency>
+        <groupId>tyrael-process-mgmt</groupId>
+        <artifactId>tyrael-process-mgmt-models</artifactId>
+        <version>${project.version}</version>
+      </dependency>
 
       <!-- PROJECT -->
       <dependency>
         <groupId>baldy.commons</groupId>
         <artifactId>baldy-commons-models</artifactId>
-        <version>${project.version}</version>
+        <version>${baldy-commons.version}</version>
       </dependency>
       <dependency>
         <groupId>baldy.commons.security</groupId>
         <artifactId>baldy-commons-security-models</artifactId>
-        <version>${project.version}</version>
+        <version>${baldy-commons.version}</version>
       </dependency>
       <dependency>
         <groupId>baldy.commons.security</groupId>
         <artifactId>baldy-commons-security-services</artifactId>
-        <version>${project.version}</version>
+        <version>${baldy-commons.version}</version>
       </dependency>
       <dependency>
         <groupId>baldy.commons.web</groupId>
         <artifactId>baldy-commons-web</artifactId>
-        <version>${project.version}</version>
+        <version>${baldy-commons.version}</version>
       </dependency>
       <dependency>
         <groupId>baldy.commons</groupId>
         <artifactId>baldy-commons-test</artifactId>
-        <version>${project.version}</version>
+        <version>${baldy-commons.version}</version>
         <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>baldy.commons</groupId>
         <artifactId>baldy-commons-apidoc</artifactId>
-        <version>${project.version}</version>
+        <version>${baldy-commons.version}</version>
       </dependency>
       <dependency>
         <groupId>baldy.commons</groupId>
         <artifactId>baldy-commons-resourcedoc</artifactId>
-        <version>${project.version}</version>
+        <version>${baldy-commons.version}</version>
         <type>war</type>
       </dependency>
       <dependency>
         <groupId>baldy.commons</groupId>
         <artifactId>baldy-commons-resourcedoc</artifactId>
         <classifier>classes</classifier>
-        <version>${project.version}</version>
+        <version>${baldy-commons.version}</version>
       </dependency>
       <dependency>
         <groupId>baldy.commons</groupId>
         <artifactId>baldy-commons-resourcedoc</artifactId>
-        <version>${project.version}</version>
+        <version>${baldy-commons.version}</version>
         <type>war</type>
       </dependency>
       <dependency>
         <groupId>baldy.commons</groupId>
         <artifactId>baldy-commons-resourcedoc</artifactId>
-        <version>${project.version}</version>
+        <version>${baldy-commons.version}</version>
         <classifier>classes</classifier>
       </dependency>
       <dependency>
         <groupId>baldy.commons</groupId>
         <artifactId>baldy-commons-data-mysql</artifactId>
-        <version>${project.version}</version>
+        <version>${baldy-commons.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>baldy.commons</groupId>
+        <artifactId>baldy-commons-services</artifactId>
+        <version>${baldy-commons.version}</version>
       </dependency>
 
       <!-- SPRING -->

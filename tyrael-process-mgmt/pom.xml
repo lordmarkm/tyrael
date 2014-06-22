@@ -12,5 +12,6 @@
   <name>Tyrael Engine :: Process Management</name>
   <modules>
     <module>tyrael-process-mgmt-models</module>
+    <module>tyrael-process-mgmt-services</module>
   </modules>
 </project>

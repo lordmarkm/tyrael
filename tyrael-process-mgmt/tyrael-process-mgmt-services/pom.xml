@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>tyrael-process-mgmt</groupId>
+    <artifactId>tyrael-process-mgmt</artifactId>
+    <version>1.0</version>
+  </parent>
+
+  <artifactId>tyrael-process-mgmt-services</artifactId>
+  <name>Tyrael Engine :: Process Management :: Services</name>
+
+  <dependencies>
+    <!-- Project dependencies -->
+    <dependency>
+      <groupId>baldy.commons</groupId>
+      <artifactId>baldy-commons-services</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>tyrael-process-mgmt</groupId>
+      <artifactId>tyrael-process-mgmt-models</artifactId>
+    </dependency>
+  </dependencies>
+</project>
