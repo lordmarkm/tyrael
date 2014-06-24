@@ -9,4 +9,7 @@
   <artifactId>tyrael-commons</artifactId>
   <packaging>pom</packaging>
   <name>Tyrael Engine :: Commons</name>
+  <modules>
+    <module>tyrael-commons-data</module>
+  </modules>
 </project>

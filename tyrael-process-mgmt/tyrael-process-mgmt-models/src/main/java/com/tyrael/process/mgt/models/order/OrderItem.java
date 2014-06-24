@@ -3,19 +3,19 @@ package com.tyrael.process.mgt.models.order;
 import java.math.BigDecimal;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.MappedSuperclass;
 
 import org.springframework.core.style.ToStringCreator;
 
 import com.baldy.commons.models.BaseBaldyEntity;
 import com.tyrael.process.mgt.models.product.Product;
 
-@Entity(name = "ORDER_ITEM")
-public class OrderItem extends BaseBaldyEntity {
+@MappedSuperclass
+public abstract class OrderItem<E extends SalesOrder> extends BaseBaldyEntity {
 
     @ManyToOne(optional = false)
-    private SalesOrder salesOrder;
+    private E salesOrder;
 
     @ManyToOne(optional = false)
     private Product product;
@@ -32,11 +32,11 @@ public class OrderItem extends BaseBaldyEntity {
             .toString();
     }
 
-    public SalesOrder getSalesOrder() {
+    public E getSalesOrder() {
         return salesOrder;
     }
 
-    public void setSalesOrder(SalesOrder salesOrder) {
+    public void setSalesOrder(E salesOrder) {
         this.salesOrder = salesOrder;
     }
 

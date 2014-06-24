@@ -4,8 +4,8 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.MappedSuperclass;
 import javax.persistence.OneToMany;
 
 import org.springframework.core.style.ToStringCreator;
@@ -15,8 +15,8 @@ import com.baldy.commons.models.proper.Person;
 /**
  * @author Mark
  */
-@Entity(name = "SALES_ORDER")
-public class SalesOrder extends ProcessOrder {
+@MappedSuperclass
+public abstract class SalesOrder<E extends OrderItem> extends ProcessOrder {
 
     @Column(name = "TRACKING_NO", unique = true, nullable = false)
     private String trackingNo;
@@ -31,7 +31,7 @@ public class SalesOrder extends ProcessOrder {
     private String shipTo;
 
     @OneToMany(cascade = CascadeType.ALL)
-    private List<OrderItem> items;
+    private List<E> items;
 
     @Override
     public String toString() {
@@ -68,11 +68,11 @@ public class SalesOrder extends ProcessOrder {
         this.shipTo = shipTo;
     }
 
-    public List<OrderItem> getItems() {
+    public List<E> getItems() {
         return items;
     }
 
-    public void setItems(List<OrderItem> items) {
+    public void setItems(List<E> items) {
         this.items = items;
     }
 

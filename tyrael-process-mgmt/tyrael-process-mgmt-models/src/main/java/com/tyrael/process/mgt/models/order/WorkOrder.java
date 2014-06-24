@@ -1,8 +1,8 @@
 package com.tyrael.process.mgt.models.order;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.MappedSuperclass;
 
 import org.springframework.core.style.ToStringCreator;
 
@@ -11,14 +11,14 @@ import org.springframework.core.style.ToStringCreator;
  * @author Mark
  *
  */
-@Entity(name = "WORK_ORDER")
-public class WorkOrder extends ProcessOrder {
+@MappedSuperclass
+public abstract class WorkOrder<E extends SalesOrder> extends ProcessOrder {
 
     @Column(name = "TRACKING_NO", unique = true, nullable = false)
     private String trackingNo;
     
     @ManyToOne
-    private SalesOrder salesOrder;
+    private E salesOrder;
 
     @Override
     public String toString() {
@@ -36,11 +36,11 @@ public class WorkOrder extends ProcessOrder {
         this.trackingNo = trackingNo;
     }
 
-    public SalesOrder getSalesOrder() {
+    public E getSalesOrder() {
         return salesOrder;
     }
 
-    public void setSalesOrder(SalesOrder salesOrder) {
+    public void setSalesOrder(E salesOrder) {
         this.salesOrder = salesOrder;
     }
 }
