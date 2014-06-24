@@ -12,7 +12,7 @@ import org.springframework.core.style.ToStringCreator;
  *
  */
 @Entity(name = "WORK_ORDER")
-public class WorkOrder {
+public class WorkOrder extends ProcessOrder {
 
     @Column(name = "TRACKING_NO", unique = true, nullable = false)
     private String trackingNo;

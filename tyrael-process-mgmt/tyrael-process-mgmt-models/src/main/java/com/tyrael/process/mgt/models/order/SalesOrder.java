@@ -1,33 +1,49 @@
 package com.tyrael.process.mgt.models.order;
 
-import java.math.BigDecimal;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-import com.baldy.commons.models.BaseBaldyEntity;
+import org.springframework.core.style.ToStringCreator;
+
 import com.baldy.commons.models.proper.Person;
-import com.tyrael.process.mgt.models.product.Product;
 
 /**
  * @author Mark
  */
 @Entity(name = "SALES_ORDER")
-public class SalesOrder extends BaseBaldyEntity {
+public class SalesOrder extends ProcessOrder {
 
     @Column(name = "TRACKING_NO", unique = true, nullable = false)
     private String trackingNo;
 
-    @OneToMany
+    @Column
+    private String purchaseOrderNo;
+
+    @ManyToOne(optional = false)
     private Person customer;
 
-    @OneToMany
-    private Product product;
+    @Column(name = "SHIP_TO")
+    private String shipTo;
 
-    @OneToMany
-    private BigDecimal quantity;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<OrderItem> items;
 
+    @Override
+    public String toString() {
+        return new ToStringCreator(this)
+            .append("Tracking no", trackingNo)
+            .append("Purchase Order no", purchaseOrderNo)
+            .append("Ship to", shipTo)
+            .append("Customer", customer)
+            .append("Items", items)
+            .toString();
+    }
+    
     public String getTrackingNo() {
         return trackingNo;
     }
@@ -44,20 +60,28 @@ public class SalesOrder extends BaseBaldyEntity {
         this.customer = customer;
     }
 
-    public Product getProduct() {
-        return product;
+    public String getShipTo() {
+        return shipTo;
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
+    public void setShipTo(String shipTo) {
+        this.shipTo = shipTo;
     }
 
-    public BigDecimal getQuantity() {
-        return quantity;
+    public List<OrderItem> getItems() {
+        return items;
     }
 
-    public void setQuantity(BigDecimal quantity) {
-        this.quantity = quantity;
+    public void setItems(List<OrderItem> items) {
+        this.items = items;
+    }
+
+    public String getPurchaseOrderNo() {
+        return purchaseOrderNo;
+    }
+
+    public void setPurchaseOrderNo(String purchaseOrderNo) {
+        this.purchaseOrderNo = purchaseOrderNo;
     }
 
 }
