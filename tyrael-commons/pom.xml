@@ -11,5 +11,6 @@
   <name>Tyrael Engine :: Commons</name>
   <modules>
     <module>tyrael-commons-data</module>
+    <module>tyrael-commons-mapper</module>
   </modules>
 </project>
