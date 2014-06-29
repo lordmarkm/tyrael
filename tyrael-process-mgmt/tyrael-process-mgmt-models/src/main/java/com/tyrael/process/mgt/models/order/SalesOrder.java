@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.OneToMany;
@@ -21,14 +22,15 @@ public abstract class SalesOrder<E extends OrderItem> extends ProcessOrder {
     @Column(name = "TRACKING_NO", unique = true, nullable = false)
     private String trackingNo;
 
-    @Column
+    @Column(name = "PURCHASE_ORDER_NO")
     private String purchaseOrderNo;
-
-    @ManyToOne(optional = false)
-    private Person customer;
 
     @Column(name = "SHIP_TO")
     private String shipTo;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "CUSTOMER_ID")
+    private Person customer;
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<E> items;

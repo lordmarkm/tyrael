@@ -3,6 +3,7 @@ package com.tyrael.process.mgt.models.order;
 import java.math.BigDecimal;
 
 import javax.persistence.Column;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
 
@@ -12,13 +13,15 @@ import com.baldy.commons.models.BaseBaldyEntity;
 import com.tyrael.process.mgt.models.product.Product;
 
 @MappedSuperclass
-public abstract class OrderItem<E extends SalesOrder> extends BaseBaldyEntity {
+public abstract class OrderItem<E extends SalesOrder, F extends Product> extends BaseBaldyEntity {
 
     @ManyToOne(optional = false)
+    @JoinColumn(name = "SALES_ORDER_ID")
     private E salesOrder;
 
     @ManyToOne(optional = false)
-    private Product product;
+    @JoinColumn(name = "PRODUCT_ID")
+    private F product;
 
     @Column
     private BigDecimal quantity = BigDecimal.ZERO;
@@ -40,11 +43,11 @@ public abstract class OrderItem<E extends SalesOrder> extends BaseBaldyEntity {
         this.salesOrder = salesOrder;
     }
 
-    public Product getProduct() {
+    public F getProduct() {
         return product;
     }
 
-    public void setProduct(Product product) {
+    public void setProduct(F product) {
         this.product = product;
     }
 

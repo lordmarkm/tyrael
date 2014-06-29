@@ -1,6 +1,6 @@
 package com.tyrael.process.mgt.models.product;
 
-import javax.persistence.Entity;
+import javax.persistence.MappedSuperclass;
 
 import com.baldy.commons.models.BaseBaldyEntity;
 
@@ -9,7 +9,7 @@ import com.baldy.commons.models.BaseBaldyEntity;
  * @author Mark
  *
  */
-@Entity(name = "PRODUCT")
-public class Product extends BaseBaldyEntity {
+@MappedSuperclass
+public abstract class Product extends BaseBaldyEntity {
 
 }
