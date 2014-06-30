@@ -16,11 +16,11 @@ import com.baldy.commons.models.BaseBaldyEntity;
 @MappedSuperclass
 public abstract class ProcessOrder extends BaseBaldyEntity {
 
-    @Column
+    @Column(name = "DATE_CREATED")
     @Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     private DateTime dateCreated;
 
-    @Column
+    @Column(name = "DATE_COMPLETED")
     @Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     private DateTime dateCompleted;
 
