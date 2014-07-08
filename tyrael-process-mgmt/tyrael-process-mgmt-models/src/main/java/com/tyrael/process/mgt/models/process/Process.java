@@ -1,11 +1,14 @@
 package com.tyrael.process.mgt.models.process;
 
 import javax.persistence.Column;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
 
 import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
+import com.baldy.commons.models.BaseBaldyEntity;
 import com.baldy.commons.models.proper.Person;
 import com.tyrael.process.mgt.models.order.WorkOrder;
 
@@ -13,7 +16,7 @@ import com.tyrael.process.mgt.models.order.WorkOrder;
  * @author mbmartinez
  */
 @MappedSuperclass
-public abstract class Process<P extends Person, W extends WorkOrder> {
+public abstract class Process<P extends Person, W extends WorkOrder> extends BaseBaldyEntity {
 
     @Column(name = "STARTED")
     @Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")
@@ -23,10 +26,12 @@ public abstract class Process<P extends Person, W extends WorkOrder> {
     @Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     private DateTime dateCompleted;
 
-    @Column(name = "ACTOR_ID")
+    @ManyToOne
+    @JoinColumn(name = "ACTOR_ID")
     private P actor;
 
-    @Column(name = "WORK_ORDER_ID")
+    @ManyToOne
+    @JoinColumn(name = "WORK_ORDER_ID")
     private W workOrder;
 
     public DateTime getDateStarted() {

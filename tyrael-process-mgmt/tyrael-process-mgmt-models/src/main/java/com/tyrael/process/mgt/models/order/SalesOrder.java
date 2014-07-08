@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
@@ -17,7 +18,7 @@ import com.baldy.commons.models.proper.Person;
  * @author Mark
  */
 @MappedSuperclass
-public abstract class SalesOrder<E extends OrderItem> extends ProcessOrder {
+public abstract class SalesOrder<E extends OrderItem, P extends Person> extends ProcessOrder {
 
     @Column(name = "TRACKING_NO", unique = true, nullable = false)
     private String trackingNo;
@@ -30,9 +31,9 @@ public abstract class SalesOrder<E extends OrderItem> extends ProcessOrder {
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "CUSTOMER_ID")
-    private Person customer;
+    private P customer;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy="salesOrder")
     private List<E> items;
 
     @Override
@@ -54,11 +55,11 @@ public abstract class SalesOrder<E extends OrderItem> extends ProcessOrder {
         this.trackingNo = trackingNo;
     }
 
-    public Person getCustomer() {
+    public P getCustomer() {
         return customer;
     }
 
-    public void setCustomer(Person customer) {
+    public void setCustomer(P customer) {
         this.customer = customer;
     }
 
