@@ -13,7 +13,7 @@ import com.baldy.commons.models.BaseBaldyEntity;
 import com.tyrael.process.mgt.models.product.Product;
 
 @MappedSuperclass
-public abstract class OrderItem<E extends SalesOrder, F extends Product> extends BaseBaldyEntity {
+public abstract class OrderItem<E extends SalesOrder, F extends Product, W extends WorkOrder> extends BaseBaldyEntity {
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "SALES_ORDER_ID")
@@ -22,6 +22,10 @@ public abstract class OrderItem<E extends SalesOrder, F extends Product> extends
     @ManyToOne(optional = false)
     @JoinColumn(name = "PRODUCT_ID")
     private F product;
+
+    @ManyToOne
+    @JoinColumn(name = "WORK_ORDER")
+    private W workOrder;
 
     @Column
     private BigDecimal quantity = BigDecimal.ZERO;
@@ -32,6 +36,7 @@ public abstract class OrderItem<E extends SalesOrder, F extends Product> extends
             .append("Sales order", salesOrder.getTrackingNo())
             .append("Product", product)
             .append("Quantity", quantity)
+            .append("Work order", workOrder)
             .toString();
     }
 
@@ -57,6 +62,14 @@ public abstract class OrderItem<E extends SalesOrder, F extends Product> extends
 
     public void setQuantity(BigDecimal quantity) {
         this.quantity = quantity;
+    }
+
+    public W getWorkOrder() {
+        return workOrder;
+    }
+
+    public void setWorkOrder(W workOrder) {
+        this.workOrder = workOrder;
     }
 
 }
