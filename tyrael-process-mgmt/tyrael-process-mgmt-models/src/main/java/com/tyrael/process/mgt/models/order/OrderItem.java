@@ -13,15 +13,15 @@ import com.baldy.commons.models.BaseBaldyEntity;
 import com.tyrael.process.mgt.models.product.Product;
 
 @MappedSuperclass
-public abstract class OrderItem<E extends SalesOrder, F extends Product, W extends WorkOrder> extends BaseBaldyEntity {
+public abstract class OrderItem<S extends SalesOrder, P extends Product, W extends WorkOrder> extends BaseBaldyEntity {
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "SALES_ORDER_ID")
-    private E salesOrder;
+    private S salesOrder;
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "PRODUCT_ID")
-    private F product;
+    private P product;
 
     @ManyToOne
     @JoinColumn(name = "WORK_ORDER")
@@ -40,19 +40,19 @@ public abstract class OrderItem<E extends SalesOrder, F extends Product, W exten
             .toString();
     }
 
-    public E getSalesOrder() {
+    public S getSalesOrder() {
         return salesOrder;
     }
 
-    public void setSalesOrder(E salesOrder) {
+    public void setSalesOrder(S salesOrder) {
         this.salesOrder = salesOrder;
     }
 
-    public F getProduct() {
+    public P getProduct() {
         return product;
     }
 
-    public void setProduct(F product) {
+    public void setProduct(P product) {
         this.product = product;
     }
 

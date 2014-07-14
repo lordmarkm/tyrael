@@ -13,9 +13,12 @@ public abstract class WorkOrder extends ProcessOrder {
 
     @Column(name = "TRACKING_NO", unique = true, nullable = false)
     private String trackingNo;
-    
+
     @Column
     private Integer quantity;
+
+    @Column
+    private String status;
 
     public String getTrackingNo() {
         return trackingNo;
@@ -31,6 +34,14 @@ public abstract class WorkOrder extends ProcessOrder {
 
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
 }
