@@ -20,8 +20,8 @@ public abstract class MaterialStack<M extends Material> extends BaseBaldyEntity 
     @JoinColumn(name = "MATERIAL")
     private M material;
 
-    @Column(name = "AMOUNT")
-    private BigDecimal amount;
+    @Column(name = "QUANTITY")
+    private BigDecimal quantity;
 
     public M getMaterial() {
         return material;
@@ -31,11 +31,11 @@ public abstract class MaterialStack<M extends Material> extends BaseBaldyEntity 
         this.material = material;
     }
 
-    public BigDecimal getAmount() {
-        return amount;
+    public BigDecimal getQuantity() {
+        return quantity;
     }
 
-    public void setAmount(BigDecimal amount) {
-        this.amount = amount;
+    public void setQuantity(BigDecimal quantity) {
+        this.quantity = quantity;
     }
 }
