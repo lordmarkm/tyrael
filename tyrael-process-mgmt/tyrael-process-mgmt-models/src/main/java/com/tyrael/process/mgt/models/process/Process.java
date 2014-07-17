@@ -26,11 +26,11 @@ public abstract class Process<P extends Person, W extends WorkOrder> extends Bas
     @Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     private DateTime dateCompleted;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
     @JoinColumn(name = "ACTOR_ID")
     private P actor;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
     @JoinColumn(name = "WORK_ORDER_ID")
     private W workOrder;
 
