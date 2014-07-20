@@ -9,12 +9,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.OneToOne;
 
-import com.baldy.commons.models.BaseBaldyEntity;
+import com.baldy.commons.models.BaseEntity;
 
 
 @MappedSuperclass
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public abstract class MaterialStack<M extends Material> extends BaseBaldyEntity {
+public abstract class MaterialStack<M extends Material> extends BaseEntity {
 
     @OneToOne
     @JoinColumn(name = "MATERIAL")

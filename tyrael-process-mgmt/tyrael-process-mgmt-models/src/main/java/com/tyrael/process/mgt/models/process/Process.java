@@ -8,7 +8,7 @@ import javax.persistence.MappedSuperclass;
 import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
-import com.baldy.commons.models.BaseBaldyEntity;
+import com.baldy.commons.models.BaseEntity;
 import com.baldy.commons.models.proper.Person;
 import com.tyrael.process.mgt.models.order.WorkOrder;
 
@@ -16,7 +16,7 @@ import com.tyrael.process.mgt.models.order.WorkOrder;
  * @author mbmartinez
  */
 @MappedSuperclass
-public abstract class Process<P extends Person, W extends WorkOrder> extends BaseBaldyEntity {
+public abstract class Process<P extends Person, W extends WorkOrder> extends BaseEntity {
 
     @Column(name = "STARTED")
     @Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")
