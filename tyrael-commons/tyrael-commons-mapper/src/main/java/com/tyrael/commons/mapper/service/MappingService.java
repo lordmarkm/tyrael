@@ -3,6 +3,8 @@ package com.tyrael.commons.mapper.service;
 import java.util.List;
 
 import org.dozer.Mapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.GenericTypeResolver;
 
@@ -15,6 +17,8 @@ import com.google.common.collect.Lists;
  * @param <D>
  */
 public abstract class MappingService<E, D> {
+
+    private static Logger LOG = LoggerFactory.getLogger(MappingService.class);
 
     @Autowired
     private Mapper mapper;
@@ -33,6 +37,7 @@ public abstract class MappingService<E, D> {
     }
 
     protected E toEntity(D dto) {
+        LOG.debug("Mapping to entity. dto={}, entity={}", dto.getClass(), entityClass.getClass());
         return mapper.map(dto, entityClass);
     }
 

@@ -34,6 +34,10 @@ public abstract class Process<P extends Person, W extends WorkOrder> extends Bas
     @JoinColumn(name = "WORK_ORDER_ID")
     private W workOrder;
 
+    @Column(name = "REMARKS")
+    @Type(type = "text")
+    private String remarks;
+
     public DateTime getDateStarted() {
         return dateStarted;
     }
@@ -64,5 +68,13 @@ public abstract class Process<P extends Person, W extends WorkOrder> extends Bas
 
     public void setWorkOrder(W workOrder) {
         this.workOrder = workOrder;
+    }
+
+    public String getRemarks() {
+        return remarks;
+    }
+
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
     }
 }
