@@ -21,7 +21,7 @@ public abstract class MappingService<E, D> {
     private static Logger LOG = LoggerFactory.getLogger(MappingService.class);
 
     @Autowired
-    private Mapper mapper;
+    protected Mapper mapper;
 
     private Class<E> entityClass;
     private Class<D> dtoClass;
