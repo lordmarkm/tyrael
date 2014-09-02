@@ -30,6 +30,10 @@ public abstract class Process<P extends Person, W extends WorkOrder> extends Bas
     @JoinColumn(name = "ACTOR_ID")
     private P actor;
 
+    @ManyToOne
+    @JoinColumn(name = "END_ACTOR_ID")
+    private P endActor;
+
     @ManyToOne(optional = false)
     @JoinColumn(name = "WORK_ORDER_ID")
     private W workOrder;
@@ -76,5 +80,13 @@ public abstract class Process<P extends Person, W extends WorkOrder> extends Bas
 
     public void setRemarks(String remarks) {
         this.remarks = remarks;
+    }
+
+    public P getEndActor() {
+        return endActor;
+    }
+
+    public void setEndActor(P endActor) {
+        this.endActor = endActor;
     }
 }
