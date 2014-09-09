@@ -12,6 +12,6 @@
   <modules>
     <module>tyrael-commons-data</module>
     <module>tyrael-commons-mapper</module>
-    <module>tyrael-commons-barcode</module>
+    <module>tyrael-commons-reports</module>
   </modules>
 </project>
