@@ -34,6 +34,10 @@
     <freemarker.version>2.3.20</freemarker.version>
     <dozer.version>5.4.0</dozer.version>
 
+    <!-- REPORTS -->
+    <jasperreports.version>5.5.1</jasperreports.version>
+    <barcode4j.version>2.1</barcode4j.version>
+
     <!-- LOGGING -->
     <logback.version>1.0.9</logback.version>
 
@@ -95,18 +99,6 @@
         <artifactId>baldy-commons-resourcedoc</artifactId>
         <classifier>classes</classifier>
         <version>${baldy-commons.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>baldy.commons</groupId>
-        <artifactId>baldy-commons-resourcedoc</artifactId>
-        <version>${baldy-commons.version}</version>
-        <type>war</type>
-      </dependency>
-      <dependency>
-        <groupId>baldy.commons</groupId>
-        <artifactId>baldy-commons-resourcedoc</artifactId>
-        <version>${baldy-commons.version}</version>
-        <classifier>classes</classifier>
       </dependency>
       <dependency>
         <groupId>baldy.commons</groupId>
@@ -269,6 +261,18 @@
         </exclusions>
       </dependency>
 
+      <!-- REPORTS -->
+      <dependency>
+        <groupId>net.sf.jasperreports</groupId>
+        <artifactId>jasperreports</artifactId>
+        <version>${jasperreports.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>net.sf.barcode4j</groupId>
+        <artifactId>barcode4j</artifactId>
+        <version>${barcode4j.version}</version>
+      </dependency>
+    
       <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>javax.servlet-api</artifactId>
