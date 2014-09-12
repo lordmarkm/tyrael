@@ -35,7 +35,7 @@
     <dozer.version>5.4.0</dozer.version>
 
     <!-- REPORTS -->
-    <jasperreports.version>5.5.1</jasperreports.version>
+    <jasperreports.version>5.5.0</jasperreports.version>
     <barcode4j.version>2.1</barcode4j.version>
 
     <!-- LOGGING -->
