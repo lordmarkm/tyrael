@@ -73,7 +73,7 @@
         <version>${baldy-commons.version}</version>
       </dependency>
       <dependency>
-        <groupId>baldy.commons.web</groupId>
+        <groupId>baldy.commons</groupId>
         <artifactId>baldy-commons-web</artifactId>
         <version>${baldy-commons.version}</version>
       </dependency>

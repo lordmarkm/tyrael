@@ -12,7 +12,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>baldy.commons.web</groupId>
+      <groupId>baldy.commons</groupId>
       <artifactId>baldy-commons-web</artifactId>
     </dependency>
 
