@@ -13,6 +13,10 @@
       <groupId>baldy.commons</groupId>
       <artifactId>baldy-commons-models</artifactId>
     </dependency> 
+    <dependency>
+      <groupId>tyrael-commons</groupId>
+      <artifactId>tyrael-commons-models</artifactId>
+    </dependency>
   </dependencies>
 
   <build>

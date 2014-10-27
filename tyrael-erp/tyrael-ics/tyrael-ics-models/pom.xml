@@ -12,8 +12,8 @@
 
   <dependencies>
     <dependency>
-      <groupId>baldy.commons</groupId>
-      <artifactId>baldy-commons-models</artifactId>
+      <groupId>tyrael-commons</groupId>
+      <artifactId>tyrael-commons-models</artifactId>
     </dependency>
   </dependencies>
 </project>

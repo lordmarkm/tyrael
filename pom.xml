@@ -51,6 +51,11 @@
     <dependencies>
       <!-- SELF -->
       <dependency>
+        <groupId>tyrael-commons</groupId>
+        <artifactId>tyrael-commons-models</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
         <groupId>tyrael-process-mgmt</groupId>
         <artifactId>tyrael-process-mgmt-models</artifactId>
         <version>${project.version}</version>

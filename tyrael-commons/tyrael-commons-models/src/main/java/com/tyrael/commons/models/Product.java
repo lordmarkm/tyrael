@@ -1,4 +1,4 @@
-package com.tyrael.process.mgt.models.product;
+package com.tyrael.commons.models;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;

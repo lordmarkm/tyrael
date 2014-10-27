@@ -3,6 +3,8 @@ package com.tyrael.erp.ics.model;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.tyrael.commons.models.Product;
+
 /**
  * @author mbmartinez
  * @param <P>

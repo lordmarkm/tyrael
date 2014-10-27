@@ -13,5 +13,6 @@
     <module>tyrael-commons-data</module>
     <module>tyrael-commons-mapper</module>
     <module>tyrael-commons-reports</module>
+    <module>tyrael-commons-models</module>
   </modules>
 </project>

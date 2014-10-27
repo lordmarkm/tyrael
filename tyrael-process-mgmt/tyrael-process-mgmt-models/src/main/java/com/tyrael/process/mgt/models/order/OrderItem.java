@@ -10,7 +10,7 @@ import javax.persistence.MappedSuperclass;
 import org.springframework.core.style.ToStringCreator;
 
 import com.baldy.commons.models.BaseBaldyEntity;
-import com.tyrael.process.mgt.models.product.Product;
+import com.tyrael.commons.models.Product;
 
 @MappedSuperclass
 public abstract class OrderItem<S extends SalesOrder, P extends Product, W extends WorkOrder> extends BaseBaldyEntity {
