@@ -327,5 +327,6 @@
   <modules>
     <module>tyrael-commons</module>
     <module>tyrael-process-mgmt</module>
+    <module>tyrael-erp</module>
   </modules>
 </project>

@@ -1,0 +1,19 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>tyrael-erp</groupId>
+    <artifactId>tyrael-erp</artifactId>
+    <version>1.0</version>
+  </parent>
+
+  <groupId>tyrael-ics</groupId>
+  <artifactId>tyrael-ics</artifactId>
+  <packaging>pom</packaging>
+
+  <name>Tyrael ERP :: Inventory Control System (ICS)</name>
+  <description>Base Tyrael Software implementation for Inventory Control Systems</description>
+
+  <modules>
+    <module>tyrael-ics-models</module>
+  </modules>
+</project>
