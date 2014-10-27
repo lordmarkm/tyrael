@@ -16,7 +16,6 @@
       <groupId>baldy.commons</groupId>
       <artifactId>baldy-commons-services</artifactId>
     </dependency>
-    
     <dependency>
       <groupId>tyrael-process-mgmt</groupId>
       <artifactId>tyrael-process-mgmt-models</artifactId>
