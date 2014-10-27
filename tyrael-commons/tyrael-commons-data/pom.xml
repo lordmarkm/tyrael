@@ -11,7 +11,8 @@
   <dependencies>
     <dependency>
       <groupId>baldy.commons</groupId>
-      <artifactId>baldy-commons-data-mysql</artifactId>
+      <artifactId>baldy-commons-data-postgresql</artifactId>
+      <version>${baldy-commons.version}</version>
     </dependency>
   </dependencies>
 </project>

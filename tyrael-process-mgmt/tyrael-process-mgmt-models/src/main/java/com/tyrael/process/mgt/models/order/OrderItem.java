@@ -27,7 +27,7 @@ public abstract class OrderItem<S extends SalesOrder, P extends Product, W exten
     @JoinColumn(name = "WORK_ORDER")
     private W workOrder;
 
-    @Column
+    @Column(name = "QTY")
     private BigDecimal quantity = BigDecimal.ZERO;
 
     @Override
