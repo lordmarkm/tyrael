@@ -1,15 +1,18 @@
-package com.tyrael.erp.ics.model;
+package com.tyrael.erp.ics.models;
 
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.MappedSuperclass;
 
+import com.baldy.commons.models.BaseEntity;
 import com.tyrael.commons.models.Product;
 
 /**
  * @author mbmartinez
  * @param <P>
  */
-public abstract class Stock<P extends Product> {
+@MappedSuperclass
+public abstract class Stock<P extends Product> extends BaseEntity {
 
     public abstract P getProduct();
 

@@ -11,7 +11,7 @@
   <dependencies>
     <dependency>
       <groupId>tyrael-commons</groupId>
-      <artifactId>tyrael-commons-dto</artifactId>
+      <artifactId>tyrael-commons-mapper</artifactId>
     </dependency>
     <dependency>
       <groupId>baldy.commons</groupId>

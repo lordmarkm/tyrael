@@ -65,6 +65,11 @@
         <artifactId>tyrael-process-mgmt-models</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <dependency>
+        <groupId>tyrael-commons</groupId>
+        <artifactId>tyrael-commons-mapper</artifactId>
+        <version>${project.version}</version>
+      </dependency>
 
       <!-- PROJECT -->
       <dependency>

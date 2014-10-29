@@ -9,4 +9,10 @@
   <artifactId>tyrael-commons-dto</artifactId>
   <name>Tyrael Commons :: DTO</name>
 
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+    </dependency>
+  </dependencies>
 </project>

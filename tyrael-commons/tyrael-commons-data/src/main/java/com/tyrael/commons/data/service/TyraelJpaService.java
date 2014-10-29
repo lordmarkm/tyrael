@@ -1,7 +1,6 @@
 package com.tyrael.commons.data.service;
 
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.baldy.commons.models.BaseEntity;
 import com.tyrael.commons.dto.PageInfo;
@@ -11,7 +10,7 @@ import com.tyrael.commons.dto.PageInfo;
  * @param <E> Entity
  * @param <D> DTO
  */
-public interface TyraelJpaService<E extends BaseEntity, D> extends JpaRepository<E, Long> {
+public interface TyraelJpaService<E extends BaseEntity, D> {
 
     D findOneInfo(Long id);
     D saveInfo(D dto);

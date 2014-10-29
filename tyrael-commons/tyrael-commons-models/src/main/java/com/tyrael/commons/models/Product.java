@@ -3,7 +3,7 @@ package com.tyrael.commons.models;
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
-import com.baldy.commons.models.BaseBaldyEntity;
+import com.baldy.commons.models.BaseNamedEntity;
 
 /**
  * 
@@ -11,7 +11,7 @@ import com.baldy.commons.models.BaseBaldyEntity;
  *
  */
 @MappedSuperclass
-public abstract class Product extends BaseBaldyEntity {
+public abstract class Product extends BaseNamedEntity {
 
     @Column(name = "UOM")
     private String unitOfMeasurement;
