@@ -3,7 +3,7 @@
   <parent>
     <groupId>tyrael-process-mgmt</groupId>
     <artifactId>tyrael-process-mgmt</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
   </parent>
   <artifactId>tyrael-process-mgmt-models</artifactId>
   <name>Tyrael Engine :: Process Management :: Models</name>

@@ -4,12 +4,18 @@
   <parent>
     <groupId>tyrael-commons</groupId>
     <artifactId>tyrael-commons</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
   </parent>
   <artifactId>tyrael-commons-mapper</artifactId>
   <name>Tyrael Commons :: Mapper</name>
 
   <dependencies>
+    <!-- Tyrael -->
+    <dependency>
+      <groupId>tyrael-commons</groupId>
+      <artifactId>tyrael-commons-dto</artifactId>
+    </dependency>
+
     <!-- Spring -->
     <dependency>
       <groupId>org.springframework</groupId>

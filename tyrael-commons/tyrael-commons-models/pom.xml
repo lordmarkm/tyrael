@@ -4,10 +4,10 @@
   <parent>
     <groupId>tyrael-commons</groupId>
     <artifactId>tyrael-commons</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
   </parent>
   <artifactId>tyrael-commons-models</artifactId>
-  <name>Tyrael :: Commons :: Models</name>
+  <name>Tyrael Commons :: Models</name>
 
   <dependencies>
     <dependency>

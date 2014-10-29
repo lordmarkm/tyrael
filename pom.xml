@@ -4,14 +4,14 @@
 
   <groupId>tyrael</groupId>
   <artifactId>tyrael</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
   <packaging>pom</packaging>
 
   <name>Tyrael Engine :: Parent</name>
 
   <properties>
-    <project.version>1.0</project.version>
-    <baldy-commons.version>2.0</baldy-commons.version>
+    <project.version>1.1</project.version>
+    <baldy-commons.version>3.0</baldy-commons.version>
 
     <maven.jetty.version>8.1.8.v20121106</maven.jetty.version>
     <spring.version>4.0.2.RELEASE</spring.version>
@@ -53,6 +53,11 @@
       <dependency>
         <groupId>tyrael-commons</groupId>
         <artifactId>tyrael-commons-models</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>tyrael-commons</groupId>
+        <artifactId>tyrael-commons-dto</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
@@ -277,7 +282,7 @@
         <artifactId>barcode4j</artifactId>
         <version>${barcode4j.version}</version>
       </dependency>
-    
+
       <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>javax.servlet-api</artifactId>

@@ -3,7 +3,7 @@
   <parent>
     <groupId>tyrael</groupId>
     <artifactId>tyrael</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
   </parent>
   <groupId>tyrael-commons</groupId>
   <artifactId>tyrael-commons</artifactId>
@@ -14,5 +14,6 @@
     <module>tyrael-commons-mapper</module>
     <module>tyrael-commons-reports</module>
     <module>tyrael-commons-models</module>
+    <module>tyrael-commons-dto</module>
   </modules>
 </project>

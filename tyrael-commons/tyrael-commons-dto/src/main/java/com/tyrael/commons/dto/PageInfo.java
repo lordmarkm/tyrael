@@ -1,4 +1,4 @@
-package com.tyrael.commons.mapper.dto;
+package com.tyrael.commons.dto;
 
 import java.util.List;
 
