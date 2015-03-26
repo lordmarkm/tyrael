@@ -14,6 +14,11 @@
       <groupId>baldy.commons</groupId>
       <artifactId>baldy-commons-models</artifactId>
     </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.1</version>
+    </dependency>
   </dependencies>
 
   <build>

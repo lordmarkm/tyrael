@@ -26,6 +26,9 @@ public abstract class Process<P extends Person, W extends WorkOrder> extends Bas
     @Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     private DateTime dateCompleted;
 
+    @Column(name = "TURNAROUND_TIME")
+    private String turnaroundTime;
+
     @ManyToOne(optional = false)
     @JoinColumn(name = "ACTOR_ID")
     private P actor;
@@ -88,5 +91,13 @@ public abstract class Process<P extends Person, W extends WorkOrder> extends Bas
 
     public void setEndActor(P endActor) {
         this.endActor = endActor;
+    }
+
+    public String getTurnaroundTime() {
+        return turnaroundTime;
+    }
+
+    public void setTurnaroundTime(String turnaroundTime) {
+        this.turnaroundTime = turnaroundTime;
     }
 }
