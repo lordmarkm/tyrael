@@ -11,7 +11,7 @@
 
   <properties>
     <project.version>1.1</project.version>
-    <baldy-commons.version>3.0</baldy-commons.version>
+    <baldy-commons.version>3.1</baldy-commons.version>
 
     <maven.jetty.version>8.1.8.v20121106</maven.jetty.version>
     <spring.version>4.0.2.RELEASE</spring.version>
