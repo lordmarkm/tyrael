@@ -21,7 +21,6 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
     </dependency>
-
     <!-- Dozer -->
     <dependency>
       <groupId>net.sf.dozer</groupId>

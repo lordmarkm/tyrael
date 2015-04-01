@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.GenericTypeResolver;
 
 import com.google.common.collect.Lists;
+import com.tyrael.commons.dto.PageInfo;
 
 /**
  * @author Mark
@@ -45,4 +46,5 @@ public abstract class MappingService<E, D> {
         }
         return dtos;
     }
+
 }

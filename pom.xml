@@ -190,6 +190,13 @@
         <version>${spring.security.version}</version>
       </dependency>
 
+      <!-- SPRING DATA -->
+      <dependency>
+        <groupId>org.springframework.data</groupId>
+        <artifactId>spring-data-commons</artifactId>
+        <version>${spring.data.jpa.version}</version>
+      </dependency>
+
       <!-- HIBERNATE -->
       <dependency>
         <groupId>org.hibernate</groupId>
