@@ -8,6 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.baldy.commons.models.BaseEntity;
+import com.mysema.query.types.Predicate;
 import com.tyrael.commons.dto.PageInfo;
 import com.tyrael.commons.mapper.service.MappingService;
 
@@ -16,7 +17,7 @@ import com.tyrael.commons.mapper.service.MappingService;
  * @param <E> Entity
  * @param <D> DTO
  */
-public abstract class TyraelJpaServiceCustomImpl<E extends BaseEntity, D, R extends JpaRepository<E, Long>>
+public abstract class TyraelJpaServiceCustomImpl<E extends BaseEntity, D, R extends TyraelJpaService<E>>
     extends MappingService<E, D> {
 
     @Autowired
@@ -41,12 +42,20 @@ public abstract class TyraelJpaServiceCustomImpl<E extends BaseEntity, D, R exte
 
     public PageInfo<D> pageInfo(Pageable page) {
         Page<E> results = repo.findAll(page);
-        List<D> infos = toDto(results);
+        return toPageInfo(results);
+    }
+
+    public PageInfo<D> pageInfo(Predicate predicate, Pageable page) {
+        Page<E> results = repo.findAll(predicate, page);
+        return toPageInfo(results);
+    }
+
+    public PageInfo<D> toPageInfo(Page<E> page) {
+        List<D> infos = toDto(page);
 
         PageInfo<D> pageResponse = new PageInfo<>();
         pageResponse.setData(infos);
-        pageResponse.setTotal(results.getTotalElements());
+        pageResponse.setTotal(page.getTotalElements());
         return pageResponse;
     }
-
 }

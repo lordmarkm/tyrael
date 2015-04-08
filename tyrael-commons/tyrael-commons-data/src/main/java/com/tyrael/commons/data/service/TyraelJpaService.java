@@ -1,23 +1,12 @@
 package com.tyrael.commons.data.service;
 
-import org.springframework.data.domain.Pageable;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.baldy.commons.models.BaseEntity;
-import com.tyrael.commons.dto.PageInfo;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.querydsl.QueryDslPredicateExecutor;
 
 /**
  * @author mbmartinez
- * @param <E> Entity
- * @param <D> DTO
+ * @param <E> the entity
  */
-@Transactional
-public interface TyraelJpaService<E extends BaseEntity, D> {
-
-    D findOneInfo(Long id);
-    D saveInfo(D dto);
-    D softDelete(Long id);
-
-    PageInfo<D> pageInfo(Pageable page);
+public interface TyraelJpaService<E> extends JpaRepository<E, Long>, QueryDslPredicateExecutor<E> {
 
 }
