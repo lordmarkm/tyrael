@@ -28,7 +28,7 @@ public abstract class Sequence {
     protected String getTemporalPart() {
         return new StringBuilder()
             .append(String.valueOf(Calendar.getInstance().get(Calendar.YEAR)).substring(2))
-            .append(StringUtils.leftPad(String.valueOf(Calendar.getInstance().get(Calendar.MONTH)), 2, PADCHAR))
+            .append(StringUtils.leftPad(String.valueOf(Calendar.getInstance().get(Calendar.MONTH + 1)), 2, PADCHAR))
             .toString();
     }
 
