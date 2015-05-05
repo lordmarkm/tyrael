@@ -1,5 +1,6 @@
 package com.tyrael.commons.dto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,6 +23,11 @@ public class PageInfo<T> {
     public void setData(List<T> data) {
         this.data = data;
     }
-
+    public static <T> PageInfo<T> blank() {
+        PageInfo<T> blank = new PageInfo<>();
+        blank.setData(new ArrayList<T>());
+        blank.setTotal(0);
+        return blank;
+    }
 
 }
