@@ -1,5 +1,7 @@
 package com.tyrael.commons.dto;
 
+import org.springframework.core.style.ToStringCreator;
+
 /**
  * @author mbmartinez
  */
@@ -11,6 +13,15 @@ public class AddressInfo {
     private String province;
     private String zip;
 
+    public String toString() {
+        return new ToStringCreator(this)
+            .append("line1", addressLine1)
+            .append("line2", addressLine2)
+            .append("city", city)
+            .append("prov", province)
+            .append("zip", zip)
+            .toString();
+    }
     public String getAddressLine1() {
         return addressLine1;
     }
