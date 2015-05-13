@@ -1,5 +1,7 @@
 package com.tyrael.commons.data.service;
 
+import java.util.List;
+
 import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,6 +18,7 @@ public interface TyraelJpaServiceCustom<E extends BaseEntity, D> {
 
     D findOneInfo(Long id);
     D saveInfo(D dto);
+    List<D> saveInfo(Iterable<D> dtos);
     D softDelete(Long id);
 
     PageInfo<D> pageInfo(Pageable page);
