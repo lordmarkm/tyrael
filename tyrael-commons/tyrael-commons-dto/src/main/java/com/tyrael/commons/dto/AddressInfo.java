@@ -22,6 +22,19 @@ public class AddressInfo {
             .append("zip", zip)
             .toString();
     }
+    public String getFormattedAddress() {
+        StringBuilder sb = new StringBuilder();
+        if (null != addressLine1) {
+            sb.append(addressLine1);
+        }
+        if (null != addressLine2) {
+            if (sb.length() > 0) {
+                sb.append(", ");
+            }
+            sb.append(addressLine2);
+        }
+        return sb.toString();
+    }
     public String getAddressLine1() {
         return addressLine1;
     }
