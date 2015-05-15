@@ -30,8 +30,16 @@ public abstract class TyraelJpaServiceCustomImpl<E extends BaseEntity, D, R exte
         return toDto(repo.save(toEntity(dto)));
     }
 
+    public E saveInfoAndGetEntity(D dto) {
+        return repo.save(toEntity(dto));
+    }
+
     public List<D> saveInfo(Iterable<D> dtos) {
         return toDto(repo.save(toEntity(dtos)));
+    }
+
+    public List<E> saveInfoAndGetEntity(Iterable<D> dtos) {
+        return repo.save(toEntity(dtos));
     }
 
     public D softDelete(Long id) {
